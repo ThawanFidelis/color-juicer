@@ -1,9 +1,33 @@
-section.app-try
-  header
-    h2 Experimente!
-    
-    = simple_form_for @juicer, remote: true do |f|
-      = f.input :url
-      = f.submit 'Enviar'
+section.section#color-juicer-try
+  .container
+    .columns.is-vcentered
+      .column.is-third.is-left
+        p.title Color 
+          b:Juicer
+        p.subtitle Cole a url da imagem
 
-  .js-colors-create
+      .column
+        = simple_form_for @juicer, remote: true, html: { class: ''} do |f|
+          .control.control.is-grouped
+            = f.text_field :url, placeholder: 'URL da imagem', label: false, class: 'input is-large required email'
+
+            = f.submit 'Gerar', class: 'button is-primary is-large is-bold'
+  
+    .js-colors-create
+
+section.section#color-juicer-example
+  .container
+    .heading
+      h1.title Exemplos
+      h2.subtitle
+        | Alguns exemplos de paletas
+      br
+
+    - @juicers.in_groups_of(3, false).each do |group|
+      .hero.is-medium
+        .hero-content
+          .container
+            .columns.is-multiline
+              - group.each do |juicer|
+                .column
+                  = render partial: 'colors_thumbnail', locals: { juicer: juicer }

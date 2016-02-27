@@ -1,5 +1,6 @@
 class JuicersController < ApplicationController
   def index
+    @juicers = Juicer.all.sort
     @juicer = Juicer.new
   end
 

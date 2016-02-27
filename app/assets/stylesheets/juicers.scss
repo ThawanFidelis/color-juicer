@@ -2,22 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.app-color {
+  height: 50px;
+  width: 100%;
+}
 
-.app-colors-thumbnail {
-  text-align: center;
-  
-  img {
-    width: auto;
-    height: 120px;
+.app-color-thumbnail-card {
+  box-shadow: none;
+
+  .card-image {
+    padding: 20px 20px 0;
+     
+    img {
+      object-fit: scale-down;
+    }
   }
 
-  .app-colors {
-    list-style: none;
-
-    li {
-      display: inline-block;
-      height: 50px;
-      width: 50px;
-    }
+  .card-content {
+    padding: 20px 10px;
   }
 }

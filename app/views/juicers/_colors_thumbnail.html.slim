@@ -1,6 +1,11 @@
-.app-colors-thumbnail
-  img src="#{ juicer.url }"
+.card.app-color-thumbnail-card
+  .card-image
+    figure.image.is-2by1
+      img src="#{ juicer.url }" alt=""
 
-  ul.app-colors
-    - juicer.colors.values.each do |color|
-      li style="background: #{ color };"
+  .card-content
+    .content
+      .columns.is-gapless
+        - juicer.colors.values.each do |color|
+          .column
+            div.app-color style="background: #{ color };"

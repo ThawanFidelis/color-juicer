@@ -11,4 +11,15 @@ html
     = csrf_meta_tags
 
 body
+  .hero.is-info.is-large
+    .hero-header
+      = render partial: 'layouts/navbar'
+    
+    .hero-content.app-landing-hero
+      .container
+        h1.title.is-bold Color Juicer
+        h2.subtitle Gere paleta de cores a partir de imagens
+
+    .hero-footer
+
   = yield
