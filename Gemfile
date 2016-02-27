@@ -14,6 +14,8 @@ gem 'slim', '~> 3.0.1'
 gem 'slim-rails', '~> 3.0.1'
 gem 'font-awesome-rails', '~> 4.4.0.0'
 
+gem 'rmagick', '~> 2.15.4'
+gem 'kmeans-clusterer',  '~> 0.11.4'
 
 group :development, :test do
   gem 'byebug'

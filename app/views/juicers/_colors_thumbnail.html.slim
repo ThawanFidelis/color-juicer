@@ -1,0 +1,6 @@
+.app-colors-thumbnail
+  img src="#{ juicer.url }"
+
+  ul.app-colors
+    - juicer.colors.values.each do |color|
+      li style="background: #{ color };"

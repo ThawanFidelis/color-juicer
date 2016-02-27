@@ -1,1 +1,9 @@
-h1 Olár
+section.app-try
+  header
+    h2 Experimente!
+    
+    = simple_form_for @juicer, remote: true do |f|
+      = f.input :url
+      = f.submit 'Enviar'
+
+  .js-colors-create
