@@ -1,11 +1,10 @@
 section.section#color-juicer-try
   .container
+    .heading
+      h1.title Gerar paleta
+      h2.subtitle Cole a url da imagem para gerar paleta
+      br
     .columns.is-vcentered
-      .column.is-third.is-left
-        p.title Color 
-          b:Juicer
-        p.subtitle Cole a url da imagem
-
       .column
         = simple_form_for @juicer, remote: true, html: { class: ''} do |f|
           .control.control.is-grouped
