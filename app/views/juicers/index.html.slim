@@ -2,7 +2,6 @@ section.section#color-juicer-try
   .container
     .heading
       h1.title Gerar paleta
-      h2.subtitle Cole a url da imagem para gerar paleta
       br
     .columns.is-vcentered
       .column
@@ -11,6 +10,7 @@ section.section#color-juicer-try
             = f.text_field :url, placeholder: 'URL da imagem', label: false, class: 'input is-large required email'
 
             = f.submit 'Gerar', class: 'button is-primary is-large is-bold'
+    .notification.is-danger A imagem usada entrará para a galeria de exemplos. Be kind. :)
   
     .js-colors-create
 
