@@ -5,7 +5,7 @@ section.section#color-juicer-try
       br
     .columns.is-vcentered
       .column
-        = simple_form_for @juicer, remote: true, html: { class: ''} do |f|
+        = simple_form_for @juicer, remote: true, html: { class: 'js-test-form'} do |f|
           .control.control.is-grouped
             = f.text_field :url, placeholder: 'URL da imagem', label: false, class: 'input is-large required email'
 
